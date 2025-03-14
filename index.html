@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АкваМир – Ныряй в мир водных приключений!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="IMG_3496 copy.PNG" class="aqua">
+            <a href="#" class="logo">Aqua World</a>
+            <nav class="nav">
+                <ul>
+                    
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#attractions">Аттракционы</a></li>
+                    <li><a href="#prices">Цены и акции</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                  
+                </ul>
+            </nav>
+            <a href="#orderForm" class="buy-ticket" onclick="openOrderForm()" >Купить билет</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главная -->
+        <section id="home" class="hero">
+            <h1>Ныряй в мир водных приключений!</h1>
+            <a href="#orderForm" class="buy-ticket" onclick="openOrderForm()" >Купить билет</a>
+        </section>
+
+        
+        <section id="attractions" class="others">
+            <h2>Аттракционы</h2>
+                <p><strong>Водопад приключений:</strong> Захватывающая горка с крутыми виражами и брызгами.</p>
+                <p><strong>Ленивая река:</strong> Спокойное плавание на надувных кругах по извилистому маршруту.</p>
+                <p><strong>Детский остров:</strong> Безопасная зона для малышей с фонтанами и мини-горками.</p>
+                <p><strong>Экстрим-спуск:</strong> Резкие повороты и свободное падение для любителей адреналина.</p>
+            
+        </section>
+
+        <!-- Цены и акции -->
+        <section id="prices" class="others">
+            <h2>Цены и акции</h2>
+            <p>Взрослый билет: 1500₽</p>
+            <p>Детский билет (до 12 лет): 800₽</p>
+            <p>Семейный билет (2 взрослых + 1 ребёнок): 3500₽</p>
+            <h3>Акции:</h3>
+            <p>«Счастливые часы» – скидка 20% с 10:00 до 12:00 по будням.</p>
+            <p>«День рождения в АкваМире» – бесплатный вход для именинника.</p>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contacts" class="others">
+            <h2>Контакты</h2>
+            <p>Адрес: г. [Астана], ул. [Майкайын 1],</p>
+            <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+            <p>Email: info@aquaworld.ru</p>
+            <p>Часы работы: Пн–Пт: 10:00–20:00, Сб–Вс: 09:00–22:00</p>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews" class="others">
+            <h2>Отзывы</h2>
+            <p><strong>Анна П.:</strong> "Мы с семьёй в восторге! Очень чисто, красиво и безопасно. Обязательно вернёмся!"</p>
+            <p><strong>Игорь С.:</strong> "Аттракционы супер, особенно «Экстрим-спуск»! Адреналин зашкаливает!"</p>
+            <p><strong>Марина К.:</strong> "Детский остров – просто находка! Ребёнок в восторге, а мы спокойно отдыхаем."</p>
+        </section>
+
+        <!-- Форма заказа -->
+        <section class="order-form" id="orderForm">
+            <h2>Оформить заказ</h2>
+            <form id="ticketForm">
+                <label>
+                    Взрослый билет (1500₽):
+                    <input type="number" id="adultTickets" min="0" value="0">
+                </label>
+
+                <label>
+                    Детский билет (800₽):
+                    <input type="number" id="childTickets" min="0" value="0">
+                </label>
+
+                <label>
+                    Семейный билет (3500₽):
+                    <input type="number" id="familyTickets" min="0" value="0">
+                </label>
+
+                <label>
+                    Ваше имя:
+                    <input type="text" id="name" required>
+                </label>
+
+                <label>
+                    Email:
+                    <input type="email" id="email" required>
+                </label>
+
+                <label>
+                    Телефон:
+                    <input type="tel" id="phone" required>
+                </label>
+
+                <button type="button" onclick="submitOrder()">Отправить заказ</button>
+            </form>
+            <p id="orderSummary"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Aqua World. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
