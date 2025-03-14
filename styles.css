@@ -139,7 +139,7 @@ body {
 }
 .aqua {
     max-height: 85px;
-    max-width: 85px;
+    width: auto;
     margin-left: 2cm;
     margin-right: 0cm;
     border-radius: 70%;
